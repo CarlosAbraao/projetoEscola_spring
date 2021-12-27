@@ -3,13 +3,59 @@
 <head>
 
     <meta name="author" content="CarlosDev" charset="utf-8">
-    <meta name="viewport" content="width=width-device, initial-scale=1.0"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="http://kit.fontawesome.com/006642858d.js"></script>
+    <link href="http://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;1,600&family=Ubuntu$family=Work+Sans&display=swap" rel="stylesheet">
      <title>Projeto Escola Padrão</title>
 </head>
 <body>
 
-<h3>Testando Index</h3>
-<h1 th:text="${msg}"></h1>
+
+<header>
+	<nav class="navbar navbar-expand-lg navbar-dark"  >
+	<a class="navbar-brand" href="#">
+	 <img alt="" src="">
+	</a>
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navMobile">
+	<span class="navbar-toggler-icon" ></span>
+	</button>
+	
+	<div id="navMobile" class="navbar-collapse collapse justify-content-end">
+	
+	<a class="nav-item nav-link" style="color: #fff" >Home</a>
+	<a class="nav-item nav-link" style="color: #fff" >Cadastrar Aluno</a>
+	<a class="nav-item nav-link" style="color: #fff">Pesquisar Aluno</a>
+	<a class="nav-item nav-link btn-danger" style="color: #fff">Sair</a>
+	
+	</div>
+	</nav>
+</header>
+  <!--FIM DO CABEÇALHO  -->
+  
+  
+  <section class="neo-section" style="background-image: url('img/escola-2.jpg');">  
+  <div class="sombra"></div>
+  <div class="center textMainContainer"><h1 class="textocentral">Sistema de Gerenciamento de Alunos</h1>
+  <div class="botoes">
+  <div class="wm">
+  	<button class="btn btn-primary">ADICIONAR ALUNO</button>
+  </div>
+  <div class="wm">
+  	<button class="btn btn-success">ENCONTRAR ALUNO</button>
+  </div>
+  <div class="clear"></div>
+  </div>
+  </div>
+  </section>
+  </section>
+  
+  
+
+
+<script src="/webjars/jquery/3.6.0/jquery.min.js"></script>
+<script src="/webjars/bootstrap/js/bootstrap.min.js"></script>
 
 </body>
 </html>
