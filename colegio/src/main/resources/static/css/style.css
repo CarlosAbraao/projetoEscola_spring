@@ -40,3 +40,11 @@ a{cursor: pointer; font-weight: bold; color: #fff;  }
 }
 
 .textocentral{color: #fff; font-size: 3em; font-weight: bold;}
+.btn{
+	width: 280px; color: #fff;border-radius: 10px;border: 3px solid #fff;
+}
+
+
+.botoes{
+	padding: 5% 15%;
+}
