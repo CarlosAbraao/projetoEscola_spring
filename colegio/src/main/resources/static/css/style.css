@@ -48,3 +48,10 @@ a{cursor: pointer; font-weight: bold; color: #fff;  }
 .botoes{
 	padding: 5% 15%;
 }
+
+.btn:hover{color: #fff000; background-color: rgba(0,0,0,0.5);}
+
+.rodape{
+	color: #fff; background-color: #1A237E; text-align: center;
+	 font-size: 1,25em; padding: 15px; font-weight: bold;
+}
