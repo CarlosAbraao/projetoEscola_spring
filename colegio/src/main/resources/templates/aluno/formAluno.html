@@ -18,7 +18,17 @@
 		<hr>
 				<form method="post" action="/InsertStudens" th:object="${aluno}" >
 			<div class="row">
+			
+			
 				<div class="col-md-6 form-group offset-md-3">
+				
+				
+				<!-- INICIO VALIDAÇÃO DA MENSAGEM DE ERRO -->
+			<!-- MENSAGEM DE ALERTA DO BOOTSTRAP -->
+			<div class="alert alert-danger" role="alert" th:if="${#fields.hasErrors('nome')}">
+				<label class="validation-message" th:errors="*{nome}"></label>
+			</div>
+			<!-- FIM VALIDAÇÃO DA MENSAGEM DE ERRO -->
 
 					<label>Nome do aluno: </label> <input class="form-control"
 						placeholder="Digite o nome do aluno" th:field="*{nome}">
@@ -29,6 +39,13 @@
 			<!-- CURSO ENUM -->
 			<div class="row">
 				<div class="col-md-6 form-group offset-md-3">
+				
+					<!-- INICIO VALIDAÇÃO DA MENSAGEM DE ERRO -->
+			<!-- MENSAGEM DE ALERTA DO BOOTSTRAP -->
+			<div class="alert alert-danger" role="alert" th:if="${#fields.hasErrors('curso')}">
+				<label class="validation-message" th:errors="*{curso}"></label>
+			</div>
+			<!-- FIM VALIDAÇÃO DA MENSAGEM DE ERRO -->
 
 					<label>Selecione o curso: </label>
 					 <select class="form-control" th:field="*{curso}"> 
@@ -43,6 +60,13 @@
 				
 				<div class="row">
 					<div class="col-md-6 form-group offset-md-3">
+					
+						<!-- INICIO VALIDAÇÃO DA MENSAGEM DE ERRO -->
+			<!-- MENSAGEM DE ALERTA DO BOOTSTRAP -->
+			<div class="alert alert-danger" role="alert" th:if="${#fields.hasErrors('matricula')}">
+				<label class="validation-message" th:errors="*{matricula}"></label>
+			</div>
+			<!-- FIM VALIDAÇÃO DA MENSAGEM DE ERRO -->
 	
 						<label>Gerar Matricula </label> 
 						<input id="matricula" class="form-control"  th:field="*{matricula}">
@@ -55,6 +79,13 @@
 			<!-- STATUS -->
 			<div class="row">
 				<div class="col-md-6 form-group offset-md-3">
+				
+					<!-- INICIO VALIDAÇÃO DA MENSAGEM DE ERRO -->
+			<!-- MENSAGEM DE ALERTA DO BOOTSTRAP -->
+			<div class="alert alert-danger" role="alert" th:if="${#fields.hasErrors('status')}">
+				<label class="validation-message" th:errors="*{status}"></label>
+			</div>
+			<!-- FIM VALIDAÇÃO DA MENSAGEM DE ERRO -->
 
 					<label>Selecione o Status: </label>
 					 <select class="form-control" th:field="*{status}"> 
