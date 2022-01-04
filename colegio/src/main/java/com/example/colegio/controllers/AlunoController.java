@@ -85,6 +85,12 @@ public class AlunoController {
 		return "redirect:/lista-alunos";
 	}
 	
+	@GetMapping("filtro-alunos")
+	public ModelAndView filtroAlunos() {
+		ModelAndView mv = new ModelAndView();
+		mv.setViewName("aluno/filtroAlunos");
+		return mv;
+	}
 
 
 }
