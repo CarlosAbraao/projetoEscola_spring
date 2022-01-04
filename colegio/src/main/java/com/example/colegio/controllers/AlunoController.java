@@ -3,6 +3,7 @@ package com.example.colegio.controllers;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -42,6 +43,35 @@ public class AlunoController {
 		mv.addObject("umalistadealunos", alunoDao.findAll());
 		return mv;
 	}
+	
+	
+	@GetMapping("/alterar/{id}")
+	public ModelAndView alterar(@PathVariable("id") long id) {
+		ModelAndView mv = new ModelAndView();
+		mv.setViewName("aluno/alterar"); 
+		Aluno aluno = alunoDao.getOne(id);
+		mv.addObject("aluno", aluno);
+		return mv;
+		
+	}
+	
+	// ADICIONANDO ALUNO 
+
+	@PostMapping("/alterar")
+	public ModelAndView alterar(Aluno aluno) {
+		ModelAndView mv = new ModelAndView();
+		alunoDao.save(aluno);
+		mv.setViewName("redirect:/lista-alunos");
+		return mv;
+	}
+	
+	// DELETANDO ALUNO 
+	@GetMapping("/excluir/{id}")
+	public String excluir(@PathVariable("id") long id) {
+		alunoDao.deleteById(id);
+		return "redirect:/lista-alunos";
+	}
+	
 
 
 }
