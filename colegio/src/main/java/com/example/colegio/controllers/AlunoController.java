@@ -91,6 +91,14 @@ public class AlunoController {
 		mv.setViewName("aluno/filtroAlunos");
 		return mv;
 	}
+	
+	@GetMapping("alunos-ativos")
+	public ModelAndView listaAlunosAtivos() {
+		ModelAndView mv = new ModelAndView();
+		mv.setViewName("aluno/alunosAtivos");
+		mv.addObject("alunosAtivos", alunoDao.findByStatusAtivos());
+		return mv;
+	}
 
 
 }

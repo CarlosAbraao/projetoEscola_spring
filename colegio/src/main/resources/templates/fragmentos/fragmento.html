@@ -24,9 +24,9 @@
 	
 		<div id="navMobile" class="collapse navbar-collapse justify-content-end">
 	
-			<a class="btn-nav nav-item nav-link"  	>Home</a>
+			<a class="btn-nav nav-item nav-link"  th:href="@{/}"	>Home</a>
 			<a class="btn-nav nav-item nav-link" th:href="@{inserirAluno}" >Cadastrar Aluno</a>
-				<a class="btn-nav nav-item nav-link"  >Pesquisar Aluno</a>
+				<a class="btn-nav nav-item nav-link" th:href="@{filtro-alunos}"  >Pesquisar Aluno</a>
 			<a class="btn-nav nav-item nav-link " >Sair</a>
 	
 		</div>
